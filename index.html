@@ -37,14 +37,14 @@
 
     <nav class="nav-section">
         <span class="nav-label">Views</span>
-        <button class="nav-btn active" data-view="all" id="viewAll">
+        <button class="nav-btn active" data-view="all">
             <svg width="15" height="15" viewBox="0 0 15 15" fill="none">
                 <circle cx="7.5" cy="7.5" r="6" stroke="currentColor" stroke-width="1.4"/>
                 <path d="M7.5 3.5v4l2.5 1.5" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/>
             </svg>
             All Tasks
         </button>
-        <button class="nav-btn" data-view="today" id="viewToday">
+        <button class="nav-btn" data-view="today">
             <svg width="15" height="15" viewBox="0 0 15 15" fill="none">
                 <rect x="1" y="2.5" width="13" height="11" rx="1.8" stroke="currentColor" stroke-width="1.4"/>
                 <path d="M4.5 1v3M10.5 1v3" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/>
@@ -53,14 +53,14 @@
             Today
             <span class="nav-badge" id="todayBadge">0</span>
         </button>
-        <button class="nav-btn" data-view="priority" id="viewPriority">
+        <button class="nav-btn" data-view="priority">
             <svg width="15" height="15" viewBox="0 0 15 15" fill="none">
                 <path d="M7.5 1.5l1.4 4.2H13l-3.5 2.5 1.4 4.2-3.4-2.5-3.4 2.5 1.4-4.2L2 5.7h4.1L7.5 1.5z" stroke="currentColor" stroke-width="1.2" stroke-linejoin="round"/>
             </svg>
             Priority
             <span class="nav-badge hi" id="priorityBadge">0</span>
         </button>
-        <button class="nav-btn" data-view="completed" id="viewCompleted">
+        <button class="nav-btn" data-view="completed">
             <svg width="15" height="15" viewBox="0 0 15 15" fill="none">
                 <path d="M2.5 7.5l3.5 3.5L12.5 4" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/>
             </svg>
@@ -105,9 +105,9 @@
 
     <div class="filter-bar" id="filterBar">
         <button class="filter-chip active" data-pf="all">All</button>
-        <button class="filter-chip" data-pf="high"> High</button>
-        <button class="filter-chip" data-pf="medium"> Medium</button>
-        <button class="filter-chip" data-pf="low"> Low</button>
+        <button class="filter-chip" data-pf="high">High</button>
+        <button class="filter-chip" data-pf="medium">Medium</button>
+        <button class="filter-chip" data-pf="low">Low</button>
     </div>
 
     <div class="content">
@@ -133,6 +133,7 @@
 
 <div class="sidebar-overlay" id="sidebarOverlay"></div>
 
+<!-- task modal -->
 <div class="modal-overlay" id="todoModal">
     <div class="modal">
         <div class="modal-head">
@@ -162,9 +163,9 @@
                 <div class="form-group">
                     <label for="todoPriority">Priority</label>
                     <select id="todoPriority">
-                        <option value="low">🟢 Low</option>
-                        <option value="medium" selected>🟡 Medium</option>
-                        <option value="high">🔴 High</option>
+                        <option value="low"> Low</option>
+                        <option value="medium" selected> Medium</option>
+                        <option value="high"> High</option>
                     </select>
                 </div>
             </div>
@@ -192,6 +193,7 @@
     </div>
 </div>
 
+<!-- project modal -->
 <div class="modal-overlay" id="projectModal">
     <div class="modal modal-sm">
         <div class="modal-head">
@@ -211,7 +213,7 @@
             <div class="form-group">
                 <label>Color</label>
                 <div class="color-picker" id="colorPicker">
-                    <button class="color-swatch selected" data-color="#7c6ff7" style="background:#7c6ff7" aria-label="Violet"></button>
+                    <button class="color-swatch selected" data-color="#7c6ff7" style="background:#6892e7" aria-label="Violet"></button>
                     <button class="color-swatch" data-color="#10b981" style="background:#10b981" aria-label="Emerald"></button>
                     <button class="color-swatch" data-color="#f59e0b" style="background:#f59e0b" aria-label="Amber"></button>
                     <button class="color-swatch" data-color="#e5484d" style="background:#e5484d" aria-label="Red"></button>
@@ -229,6 +231,7 @@
     </div>
 </div>
 
+<!-- detail modal -->
 <div class="modal-overlay" id="detailModal">
     <div class="modal">
         <div class="modal-head">
